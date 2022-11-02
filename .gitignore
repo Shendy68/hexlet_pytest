@@ -1,1 +1,6 @@
 /.venv/
+/hexlet_pytest/__pycache__
+/tests/__pycache__
+tests/__pycache__/test_stack.cpython-38-pytest-7.2.0.pyc
+tests/__pycache__/test_example.cpython-38-pytest-7.2.0.pyc
+tests/__pycache__/__init__.cpython-38.pyc
