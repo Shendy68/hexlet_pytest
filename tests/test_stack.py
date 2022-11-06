@@ -1,8 +1,12 @@
 import pytest
 
 
-def test_stack():
-    stack = []
+@pytest.fixture
+def stack():
+    return []
+
+
+def test_stack(stack):
     stack.append('one')
     stack.append('two')
     
@@ -10,8 +14,7 @@ def test_stack():
     assert stack.pop() == 'one'
 
 
-def test_emptiness():
-    stack = []
+def test_emptiness(stack):
     assert not stack
     stack.append('one')
     assert bool(stack)
@@ -20,7 +23,6 @@ def test_emptiness():
     assert not stack
 
 
-def test_pop_with_empty_stack():
-    stack = []
+def test_pop_with_empty_stack(stack):
     with pytest.raises(IndexError):
         stack.pop()
